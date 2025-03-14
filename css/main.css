@@ -1,4 +1,3 @@
-/* 🌟 全局样式 */
 
 body{
     background-color: whitesmoke;
@@ -12,7 +11,28 @@ body{
     width: 95%; 
     justify-content: center; 
     text-align: center;
+    animation: shake-scale 2s ease-in-out infinite; /* 2 秒一个循环，平滑过渡 */
 }
+
+
+@keyframes shake-scale {
+    0% { transform: translateX(0) scale(1); }
+    25% { transform: translateX(-3px) scale(1.02); }
+    50% { transform: translateX(3px) scale(0.98); }
+    75% { transform: translateX(-3px) scale(1.01); }
+    100% { transform: translateX(0) scale(1); }
+}
+
+@keyframes shake {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0, 0); }
+}
+
+
 
 .orange{
     color: orange;
@@ -22,10 +42,10 @@ body{
     margin-left: auto;
     width: 200px;
     height: 40px;
-    background-color: white; /* 修改按钮背景颜色 */
-    padding: 15px 30px; /* 增加内边距，使按钮变大 */
-    border: none; /* 去掉默认边框 */
-    border-radius: 5px; /* 圆角 */
+    background-color: white; 
+    padding: 15px 30px; 
+    border: none; 
+    border-radius: 5px; 
 }
 
 .Cimage{
@@ -35,18 +55,18 @@ body{
 
 .indexnav {
     display: flex;
-    align-items: center; /* 让 Logo、菜单、Sign Up & Login 垂直居中 */
-    justify-content: space-between; /* 左侧 Logo，中间菜单，右侧 Sign Up & Login */
+    align-items: center;
+    justify-content: space-between; 
     padding: 10px 20px;
     background-color: #f8f8f8;
 }
 
-/* 🌟 LOGO 样式 */
+
 .logo {
-    height: 50px; /* 适当调整 Logo 大小 */
+    height: 50px; 
 }
 
-/* 🌟 让 `nav-container` 内部元素水平排列 */
+
 .nav-container {
     display: flex;
     align-items: center;
@@ -54,7 +74,7 @@ body{
     width: 100%;
 }
 
-/* 🌟 让两个 `ul` 水平排列 */
+
 .menu-links,
 .auth-links {
     display: flex;
@@ -63,25 +83,25 @@ body{
     margin: 0;
 }
 
-/* 🌟 让菜单项有间距 */
+
 .nav-item {
     margin-left: 20px;
 }
 
-/* 🌟 让 `Sign Up` 和 `Login` 靠右 */
+
 .auth-links {
     margin-left: auto;
 }
 
 .nav-item a {
-    text-decoration: none; /* 去掉下划线 */
-    color: black; /* 让文字变成黑色 */
+    text-decoration: none; 
+    color: black; 
     font-weight: bold;
     padding: 5px 10px;
-    display: inline-block; /* 让 `a` 适应内容 */
+    display: inline-block; 
 }
 
-/* 🌟 让 `Login` 变成按钮 */
+
 .login a {
     background-color: orange;
     color: white;
@@ -101,20 +121,21 @@ body{
     text-align: center;
 }
 
-/* 让图标和标题在同一行 */
+
 .unlock .top-row {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px; /* 图标和标题之间的间距 */
+    gap: 15px; 
     background-color: white;
     border-radius: 15px; 
     width: 75%; 
     text-align: center;
+    animation: shake 1.5s ease-in-out infinite; 
     
 }
 
-/* 让文字独占整行 */
+
 .unlock .bottom-text {
     width: 100%;
 }
@@ -122,25 +143,25 @@ body{
 .exp-box{
     display: flex;
     justify-content: center;
-    gap: 20px; /* 设置两个按钮之间的间距 */
+    gap: 20px; 
 
 }
 
 .exp{
-    background-color: orange; /* 修改按钮背景颜色 */
-    padding: 15px 30px; /* 增加内边距，使按钮变大 */
-    font-size: 18px; /* 增大字体 */
-    border: none; /* 去掉默认边框 */
-    border-radius: 5px; /* 圆角 */
+    background-color: orange; 
+    padding: 15px 30px; 
+    font-size: 18px; 
+    border: none; 
+    border-radius: 5px; 
     
 }
 
 .view{
-    background-color: white; /* 修改按钮背景颜色 */
-    padding: 15px 30px; /* 增加内边距，使按钮变大 */
-    font-size: 18px; /* 增大字体 */
-    border: none; /* 去掉默认边框 */
-    border-radius: 5px; /* 圆角 */
+    background-color: white; 
+    padding: 15px 30px; 
+    font-size: 18px; 
+    border: none; 
+    border-radius: 5px; 
 }
 
 
@@ -159,11 +180,11 @@ body{
     align-items: center;
 }
 
-/* 给每个图标右侧加竖线 */
+
 .icon-list li:not(:last-child)::after {
     content: "|"; 
     margin: 0 15px;
-    color: #999; /* 竖线颜色 */
+    color: #999; 
     font-size: 20px;
 }
 
@@ -202,14 +223,14 @@ body{
     padding: 5px 15px;
 }
 
-/* 分别设置颜色 */
+
 .price-options p {
     padding: 5px 10px;
     border-radius: 10px;
 }
 
 .price-options p:first-child {
-    background: #ccc; /* 灰色 */
+    background: #ccc; 
 }
 
 .price-options p:last-child {
@@ -219,34 +240,33 @@ body{
 
 
 .together {
-    background-color: white; /* 设置白色背景 */
+    background-color: white; 
     max-width: 800px;
     margin: 40px auto;
-    padding: 20px; /* 增加内边距 */
-    border-radius: 10px; /* 让整体圆角 */
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* 添加阴影，使其更美观 */
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); 
 }
 
-/* 让 h2 文字更大，并让 "Together" 变成橘色 */
 .together h2 {
     font-size: 28px;
     font-weight: bold;
     text-align: left;
 }
 
-/* 让 h2 内的 "Together" 变成橘色 */
+
 .together h2 span {
     color: orange;
 }
 
-/* 让 p 也靠左，并字体稍大 */
+
 .together p {
     font-size: 18px;
     text-align: left;
     margin-bottom: 20px;
 }
 
-/* 让按钮变成橙色背景 + 圆角 + 靠右 */
+
 .together button {
     background-color: orange;
     color: white;
@@ -257,11 +277,11 @@ body{
     font-size: 16px;
     font-weight: bold;
     display: block;
-    margin-left: auto; /* 让按钮靠右 */
+    margin-left: auto; 
     text-align: center;
 }
 
-/* 按钮悬停效果 */
+
 .together button:hover {
     background-color: #e67e22;
 }
@@ -277,17 +297,17 @@ main {
 @media screen and (max-width: 768px) {
     body {
         .menu-links {
-            display: none; /* 在手机界面隐藏菜单 */
+            display: none; 
         }
 
         .Bcard-container {
             display: flex;
-            flex-direction: column; /* 让所有卡片垂直排列 */
-            gap: 20px; /* 卡片之间的间距 */
+            flex-direction: column; 
+            gap: 20px; 
             width: 80%;
-            max-width: 800px; /* 控制最大宽度，避免超宽 */
-            margin: 40px auto; /* 上下 40px 间距，左右自动居中 */
-            padding: 20px; /* 内部间距 */
+            max-width: 800px; 
+            margin: 40px auto; 
+            padding: 20px; 
         }
         
         .Bcard-container .card {
@@ -312,7 +332,7 @@ main {
         }
         
         .Bcard-container .card button {
-            align-self: flex-end; /* 按钮靠右 */
+            align-self: flex-end; 
             padding: 10px 15px;
             background: orange;
             color: white;
@@ -324,15 +344,15 @@ main {
 
         .class-card-container {
             display: flex;
-            flex-direction: column; /* 让所有卡片垂直排列 */
-            gap: 20px; /* 卡片之间的间距 */
+            flex-direction: column; 
+            gap: 20px; 
             width: 80%;
-            max-width: 800px; /* 控制最大宽度，避免超宽 */
-            margin: 40px auto; /* 上下 40px 间距，左右自动居中 */
-            padding: 20px; /* 内部间距 */
+            max-width: 800px; 
+            margin: 40px auto; 
+            padding: 20px; 
         }
         
-        /* 卡片样式 */
+        
         .class-card-container .card {
             background: #f8f8f8;
             padding: 20px;
@@ -343,7 +363,7 @@ main {
             text-align: left;
         }
         
-        /* 图片独占一行 */
+       
         .class-card-container  .card img {
             width: 100%;
             height: auto;
@@ -351,7 +371,7 @@ main {
             margin-bottom: 10px;
         }
         
-        /* 课程信息（前两个 p + 第三个 p 在同一行） */
+        
         .class-card-container .course-info {
             display: flex;
             align-items: center;
@@ -373,7 +393,7 @@ main {
             color: #666;
         }
         
-        /* 让 h2 靠左 */
+       
         .class-card-container .card h2 {
             font-size: 20px;
             font-weight: bold;
@@ -382,7 +402,7 @@ main {
             margin-bottom: 10px;
         }
         
-        /* 让下方描述 p 独占一行 */
+        
         .class-card-container .card .description {
             text-align: left;
             width: 100%;
@@ -390,7 +410,7 @@ main {
             color: #555;
         }
         
-        /* 按钮居中，占 90% 宽度，灰色背景 */
+        
         .class-card-container .card button {
             width: 90%;
             padding: 10px;
@@ -418,15 +438,15 @@ main {
 
         .testimon {
             display: flex;
-            flex-direction: column; /* 让所有卡片垂直排列 */
-            gap: 20px; /* 设定间距 */
+            flex-direction: column; 
+            gap: 20px; 
             width: 90%;
             max-width: 1000px;
             margin: 40px auto;
             padding: 20px;
         }
         
-        /* 个人卡片样式 */
+      
         .person-card {
             background: #f8f8f8;
             padding: 20px;
@@ -435,19 +455,19 @@ main {
             flex-direction: column;
         }
         
-        /* 文字独占一行 */
+
         .person-card p:first-child {
             margin-bottom: 15px;
         }
         
-        /* 头像、名字、按钮一排显示 */
+        
         .person-info {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
         
-        /* 头像和名字靠左 */
+        
         .person-info img {
             width: 50px;
             height: 50px;
@@ -461,7 +481,7 @@ main {
             gap: 10px;
         }
         
-        /* 按钮靠右，带灰色圆角背景 */
+        
         .person-info button {
             padding: 10px 15px;
             background: #e0e0e0;
@@ -482,31 +502,31 @@ main {
 
         .pricing-container {
             display: flex;
-            flex-direction: column; /* 让 `.pricing-card` 变成垂直排列 */
-            align-items: center; /* 让卡片水平居中 */
+            flex-direction: column; 
+            align-items: center; 
             gap: 20px;
             width: 90%;
-            max-width: 600px; /* 限制最大宽度 */
+            max-width: 600px; 
             margin: 40px auto;
             padding: 20px;
         }
         
-        /* 单个卡片：白色背景 + 圆角 + 约束宽度 */
+   
         .pricing-card {
             background: white;
             border-radius: 15px;
             padding: 20px;
-            width: 100%; /* 让卡片撑满容器 */
+            width: 100%; 
             text-align: center;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-sizing: border-box; /* 防止 padding 导致溢出 */
-            overflow: hidden; /* 防止内容溢出 */
+            box-sizing: border-box;
+            overflow: hidden; 
         }
         
-        /* 让内部内容不会撑大外框 */
+
         .pricing-card div {
             background: #f8f8f8;
             padding: 15px;
@@ -515,17 +535,17 @@ main {
             box-sizing: border-box;
         }
         
-        /* 标题（Plan 名称）带淡黄色边框 */
+
         .pricing-card h2 {
             border: 2px solid #ffeb99;
             padding: 10px;
             border-radius: 10px;
             display: inline-block;
-            max-width: 90%; /* 限制宽度，防止超出 */
+            max-width: 90%; 
             word-wrap: break-word;
         }
         
-        /* 价格 & /month 并排 */
+      
         .price {
             display: flex;
             justify-content: center;
@@ -536,7 +556,7 @@ main {
             max-width: 100%;
         }
         
-        /* 让 √/X 和文本放在同一行 */
+    
         .feature {
             display: flex;
             align-items: center;
@@ -549,27 +569,27 @@ main {
             box-sizing: border-box;
         }
         
-        /* √ 带淡黄色背景 */
+  
         .feature .check {
             background: #ffeb99;
             padding: 5px 10px;
             border-radius: 5px;
         }
         
-        /* X 带灰色背景 */
+
         .feature .cross {
             background: #ddd;
             padding: 5px 10px;
             border-radius: 5px;
         }
         
-        /* 限制文本宽度，防止超出 */
+        
         .feature p {
             max-width: 90%;
             word-wrap: break-word;
         }
         
-        /* 按钮填充整个卡片底部，橘色背景 */
+       
         .pricing-card button {
             width: 100%;
             background: orange;
@@ -591,7 +611,7 @@ main {
  
 
         
-/* 让 h1 和 p 在一行，一个左对齐，一个右对齐 */
+
 .header {
     display: flex;
     flex-direction: column;
@@ -599,27 +619,27 @@ main {
     margin-bottom: 20px;
 }
 
-/* 课程卡片容器，2 列布局 */
+
 .course-container {
     display: grid;
-    grid-template-columns: 1fr; /* 让每张卡片独占一行 */
-    gap: 10px; /* 保持间距 */
+    grid-template-columns: 1fr; 
+    gap: 10px; 
 }
-/* 单个课程卡片 */
+
 .Ccard {
     background: white;
     border-radius: 10px;
-    padding: 15px; /* 缩小内边距 */
+    padding: 15px; 
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    gap: 8px; /* 缩小元素之间的间距 */
+    gap: 8px;
 }
 
 .Ccard h2 {
     text-align: right;
     font-size: 20px;
-    margin-bottom: 5px; /* 缩小 h2 与 h3 的间距 */
+    margin-bottom: 5px; 
 }
 
 .Ccard h3 {
@@ -628,18 +648,18 @@ main {
     margin-bottom: 5px;
 }
 
-/* 课程内容块：减少 padding，让边框更紧凑 */
+
 .lesson-group {
     border: 1px solid #ddd;
-    padding: 5px 8px; /* 缩小内边距 */
+    padding: 5px 8px; 
     border-radius: 6px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 3px; /* 减少行间距 */
+    gap: 3px; 
+
 }
 
-/* 时间段落，缩小 padding，减少整体空间占用 */
 .lesson-time {
     background: #f0f0f0;
     padding: 3px 8px;
@@ -664,17 +684,17 @@ main {
     margin-left: 10px;
 }
 
-/* 让 4 张卡片变成单列排列 */
+
 .cards-container {
     display: flex;
-    flex-direction: column; /* 让卡片竖向排列 */
-    gap: 20px; /* 保持间距 */
-    align-items: center; /* 让整个卡片区域居中 */
+    flex-direction: column; 
+    gap: 20px;
+    align-items: center; 
     margin-top: 20px;
     width: 100%;
 }
 
-/* 单个卡片 */
+
 .card {
     background: white;
     border-radius: 10px;
@@ -682,12 +702,12 @@ main {
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* 让卡片内的元素靠左 */
+    align-items: flex-start; 
     text-align: left;
-    width: 80%; /* 让卡片有合适的宽度 */
+    width: 80%; 
 }
 
-/* 图片大小 */
+
 .card img {
     width: 50px;
     height: 50px;
@@ -700,42 +720,41 @@ main {
         footer {
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* 让所有内容靠左对齐 */
+            align-items: flex-start; 
             padding: 20px;
             background-color: #f8f8f8;
             text-align: left;
             gap: 30px;
         }
         
-        /* 图片 + 联系方式部分 */
+        
         .footer-left {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
         }
         
-        /* Home 和 About Us 部分 */
+        
         .footer-middle {
             display: flex;
             justify-content: flex-start;
             gap: 50px;
         }
         
-        /* 让 h3 下面的子项目纵向排列 */
         .footer-middle div {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
         }
         
-        /* 社交图标部分 */
+        
         .footer-right {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
         }
         
-        /* 让社交图标水平排列 */
+        
         .footer-icons {
             display: flex;
             gap: 15px;
@@ -749,13 +768,13 @@ main {
     body {
         .Bcard-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 列 */
-            grid-template-rows: repeat(2, auto); /* 2 行 */
-            gap: 20px; /* 卡片之间的间距 */
+            grid-template-columns: repeat(3, 1fr); 
+            grid-template-rows: repeat(2, auto); 
+            gap: 20px; 
             width: 80%;
             max-width: 1200px;
-            margin: 40px auto; /* 上下 40px 间距，左右自动居中 */
-            padding: 20px; /* 内部内容与边缘的间距 */
+            margin: 40px auto;
+            padding: 20px; 
         }
         
         .Bcard-container .card {
@@ -780,7 +799,7 @@ main {
         }
         
         .Bcard-container .card button {
-            align-self: flex-end; /* 按钮靠右 */
+            align-self: flex-end; 
             padding: 10px 15px;
             background: orange;
             color: white;
@@ -792,16 +811,16 @@ main {
 
         .class-card-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 列 */
-            grid-template-rows: repeat(3, auto); /* 3 行 */
-            gap: 20px; /* 卡片间距 */
+            grid-template-columns: repeat(2, 1fr); 
+            grid-template-rows: repeat(3, auto); 
+            gap: 20px; 
             width: 100%;
             max-width: 1200px;
             margin: 40px auto;
             padding: 20px;
         }
         
-        /* 卡片样式 */
+
         .class-card-container .card {
             background: #f8f8f8;
             padding: 20px;
@@ -812,7 +831,7 @@ main {
             text-align: left;
         }
         
-        /* 图片独占一行 */
+        
         .class-card-container .card img {
             width: 100%;
             height: auto;
@@ -820,7 +839,7 @@ main {
             margin-bottom: 10px;
         }
         
-        /* 课程信息（前两个 p + 第三个 p 在同一行） */
+        
         .class-card-container .course-info {
             display: flex;
             align-items: center;
@@ -842,7 +861,7 @@ main {
             color: #666;
         }
         
-        /* 让 h2 靠左 */
+        
         .class-card-container .card h2 {
             font-size: 20px;
             font-weight: bold;
@@ -851,7 +870,7 @@ main {
             margin-bottom: 10px;
         }
         
-        /* 让下方描述 p 独占一行 */
+       
         .class-card-container .card .description {
             text-align: left;
             width: 100%;
@@ -859,7 +878,7 @@ main {
             color: #555;
         }
         
-        /* 按钮居中，占 90% 宽度，灰色背景 */
+       
         .class-card-container .card button {
             width: 90%;
             padding: 10px;
@@ -886,16 +905,16 @@ main {
 
         .testimon {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 列 */
-            grid-template-rows: repeat(2, auto); /* 2 行 */
-            gap: 20px; /* 设定间距 */
+            grid-template-columns: repeat(2, 1fr); 
+            grid-template-rows: repeat(2, auto); 
+            gap: 20px; 
             width: 100%;
             max-width: 1000px;
             margin: 40px auto;
             padding: 20px;
         }
         
-        /* 个人卡片样式 */
+
         .person-card {
             background: #f8f8f8;
             padding: 20px;
@@ -904,19 +923,19 @@ main {
             flex-direction: column;
         }
         
-        /* 文字独占一行 */
+       
         .person-card p:first-child {
             margin-bottom: 15px;
         }
         
-        /* 头像、名字、按钮一排显示 */
+        
         .person-info {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
         
-        /* 头像和名字靠左 */
+        
         .person-info img {
             width: 50px;
             height: 50px;
@@ -930,7 +949,7 @@ main {
             gap: 10px;
         }
         
-        /* 按钮靠右，带灰色圆角背景 */
+        
         .person-info button {
             padding: 10px 15px;
             background: #e0e0e0;
@@ -957,7 +976,7 @@ main {
             padding: 20px;
         }
         
-        /* 单个卡片：白色背景 + 圆角 + 约束宽度 */
+    
         .pricing-card {
             background: white;
             border-radius: 15px;
@@ -968,11 +987,11 @@ main {
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-sizing: border-box; /* 防止 padding 导致溢出 */
-            overflow: hidden; /* 防止内容溢出 */
+            box-sizing: border-box; 
+            overflow: hidden; 
         }
         
-        /* 让内部内容不会撑大外框 */
+
         .pricing-card div {
             background: #f8f8f8;
             padding: 15px;
@@ -981,17 +1000,17 @@ main {
             box-sizing: border-box;
         }
         
-        /* 标题（Plan 名称）带淡黄色边框 */
+       
         .pricing-card h2 {
             border: 2px solid #ffeb99;
             padding: 10px;
             border-radius: 10px;
             display: inline-block;
-            max-width: 90%; /* 限制宽度，防止超出 */
+            max-width: 90%; 
             word-wrap: break-word;
         }
         
-        /* 价格 & /month 并排 */
+        
         .price {
             display: flex;
             justify-content: center;
@@ -1002,7 +1021,7 @@ main {
             max-width: 100%;
         }
         
-        /* 让 √/X 和文本放在同一行 */
+       
         .feature {
             display: flex;
             align-items: center;
@@ -1015,27 +1034,27 @@ main {
             box-sizing: border-box;
         }
         
-        /* √ 带淡黄色背景 */
+       
         .feature .check {
             background: #ffeb99;
             padding: 5px 10px;
             border-radius: 5px;
         }
         
-        /* X 带灰色背景 */
+       
         .feature .cross {
             background: #ddd;
             padding: 5px 10px;
             border-radius: 5px;
         }
         
-        /* 限制文本宽度，防止超出 */
+        
         .feature p {
             max-width: 90%;
             word-wrap: break-word;
         }
         
-        /* 按钮填充整个卡片底部，橘色背景 */
+       
         .pricing-card button {
             width: 100%;
             background: orange;
@@ -1056,7 +1075,7 @@ main {
         
 
         
-/* 让 h1 和 p 在一行，一个左对齐，一个右对齐 */
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -1064,28 +1083,27 @@ main {
     margin-bottom: 20px;
 }
 
-/* 课程卡片容器，2 列布局 */
+
 .course-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px; /* 调小间距 */
+    gap: 10px; 
 }
-/* 单个课程卡片 */
+
 .Ccard {
     background: white;
     border-radius: 10px;
-    padding: 15px; /* 缩小内边距 */
+    padding: 15px; 
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    gap: 8px; /* 缩小元素之间的间距 */
+    gap: 8px; 
 }
 
 .Ccard h2 {
     text-align: right;
     font-size: 20px;
-    margin-bottom: 5px; /* 缩小 h2 与 h3 的间距 */
-}
+    margin-bottom: 5px; 
 
 .Ccard h3 {
     text-align: left;
@@ -1093,18 +1111,18 @@ main {
     margin-bottom: 5px;
 }
 
-/* 课程内容块：减少 padding，让边框更紧凑 */
+
 .lesson-group {
     border: 1px solid #ddd;
-    padding: 5px 8px; /* 缩小内边距 */
+    padding: 5px 8px; 
     border-radius: 6px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 3px; /* 减少行间距 */
+    gap: 3px; 
 }
 
-/* 时间段落，缩小 padding，减少整体空间占用 */
+
 .lesson-time {
     background: #f0f0f0;
     padding: 3px 8px;
@@ -1116,7 +1134,7 @@ main {
 
 
 
-/* 让 Achievements 和 Goals 标题 + 段落靠左 */
+
 .achievements-container, .goals-container {
     max-width: 1000px;
     margin: 40px auto;
@@ -1126,21 +1144,21 @@ main {
 .achievements-container p,
 .goals-container h2,
 .goals-container p {
-    text-align: left; /* 让 h2 和 p 靠左 */
-    margin-left: 10px; /* 增加左边距 */
+    text-align: left; 
+    margin-left: 10px; 
 }
 
-/* 让 4 张卡片 2×2 居中排列 */
+
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 列 */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 20px;
-    justify-content: center; /* 让整个卡片区域居中 */
+    justify-content: center; 
     align-items: center;
     margin-top: 20px;
 }
 
-/* 单个卡片 */
+
 .card {
     background: white;
     border-radius: 10px;
@@ -1148,12 +1166,11 @@ main {
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* 让卡片内的元素靠左 */
+    align-items: flex-start;
     text-align: left;
     gap: 10px;
 }
 
-/* 图片大小 */
 .card img {
     width: 50px;
     height: 50px;
@@ -1177,33 +1194,32 @@ main {
             gap: 30px;
         }
         
-        /* 让前 3 个部分横向排列 */
         .footer-top {
             display: flex;
             width: 100%;
             justify-content: space-between;
         }
         
-         /* Home 和 About Us 部分 */
+         
          .footer-middle {
             display: flex;
             justify-content: flex-start;
             gap: 50px;
         }
         
-        /* 让 h3 下面的子项目纵向排列 */
+        
         .footer-middle div {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
         }
-        /* 让社交图标水平排列 */
+        
         .footer-icons {
             display: flex;
             gap: 15px;
         }
         
-        /* 让最后一个元素独占整行 */
+        
         .footer-bottom {
             width: 100%;
             text-align: center;
@@ -1212,19 +1228,20 @@ main {
         
     }
 }
+
 /* for PC */
 @media screen and (min-width: 1024px )  {
     body {
 
         .Bcard-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 列 */
-            grid-template-rows: repeat(2, auto); /* 2 行 */
-            gap: 20px; /* 卡片之间的间距 */
+            grid-template-columns: repeat(3, 1fr); 
+            grid-template-rows: repeat(2, auto); 
+            gap: 20px; 
             width: 80%;
             max-width: 1200px;
-            margin: 40px auto; /* 上下 40px 间距，左右自动居中 */
-            padding: 20px; /* 内部内容与边缘的间距 */
+            margin: 40px auto; 
+            padding: 20px; 
         }
         
         .Bcard-container .card {
@@ -1249,7 +1266,7 @@ main {
         }
         
         .Bcard-container .card button {
-            align-self: flex-end; /* 按钮靠右 */
+            align-self: flex-end; 
             padding: 10px 15px;
             background: orange;
             color: white;
@@ -1261,16 +1278,16 @@ main {
 
         .class-card-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 列 */
-            grid-template-rows: repeat(3, auto); /* 3 行 */
-            gap: 20px; /* 卡片间距 */
+            grid-template-columns: repeat(2, 1fr); 
+            grid-template-rows: repeat(3, auto); 
+            gap: 20px; 
             width: 100%;
             max-width: 1200px;
             margin: 40px auto;
             padding: 20px;
         }
         
-        /* 卡片样式 */
+        
         .class-card-container .card {
             background: #f8f8f8;
             padding: 20px;
@@ -1281,7 +1298,7 @@ main {
             text-align: left;
         }
         
-        /* 图片独占一行 */
+        
         .class-card-container .card img {
             width: 100%;
             height: auto;
@@ -1289,7 +1306,7 @@ main {
             margin-bottom: 10px;
         }
         
-        /* 课程信息（前两个 p + 第三个 p 在同一行） */
+        
         .class-card-container .course-info {
             display: flex;
             align-items: center;
@@ -1311,7 +1328,7 @@ main {
             color: #666;
         }
         
-        /* 让 h2 靠左 */
+       
         .class-card-container .card h2 {
             font-size: 20px;
             font-weight: bold;
@@ -1320,7 +1337,7 @@ main {
             margin-bottom: 10px;
         }
         
-        /* 让下方描述 p 独占一行 */
+       
         .class-card-container .card .description {
             text-align: left;
             width: 100%;
@@ -1328,7 +1345,7 @@ main {
             color: #555;
         }
         
-        /* 按钮居中，占 90% 宽度，灰色背景 */
+       
         .class-card-container .card button {
             width: 90%;
             padding: 10px;
@@ -1357,16 +1374,16 @@ main {
 
         .testimon {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 列 */
-            grid-template-rows: repeat(2, auto); /* 2 行 */
-            gap: 20px; /* 设定间距 */
+            grid-template-columns: repeat(2, 1fr); 
+            grid-template-rows: repeat(2, auto);
+            gap: 20px; 
             width: 100%;
             max-width: 1000px;
             margin: 40px auto;
             padding: 20px;
         }
         
-        /* 个人卡片样式 */
+
         .person-card {
             background: #f8f8f8;
             padding: 20px;
@@ -1375,19 +1392,19 @@ main {
             flex-direction: column;
         }
         
-        /* 文字独占一行 */
+        
         .person-card p:first-child {
             margin-bottom: 15px;
         }
         
-        /* 头像、名字、按钮一排显示 */
+       
         .person-info {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
         
-        /* 头像和名字靠左 */
+        
         .person-info img {
             width: 50px;
             height: 50px;
@@ -1401,7 +1418,7 @@ main {
             gap: 10px;
         }
         
-        /* 按钮靠右，带灰色圆角背景 */
+       
         .person-info button {
             padding: 10px 15px;
             background: #e0e0e0;
@@ -1428,7 +1445,7 @@ main {
             padding: 20px;
         }
         
-        /* 单个卡片：白色背景 + 圆角 + 约束宽度 */
+       
         .pricing-card {
             background: white;
             border-radius: 15px;
@@ -1439,11 +1456,11 @@ main {
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-sizing: border-box; /* 防止 padding 导致溢出 */
-            overflow: hidden; /* 防止内容溢出 */
+            box-sizing: border-box; 
+            overflow: hidden; 
         }
         
-        /* 让内部内容不会撑大外框 */
+        
         .pricing-card div {
             background: #f8f8f8;
             padding: 15px;
@@ -1452,17 +1469,17 @@ main {
             box-sizing: border-box;
         }
         
-        /* 标题（Plan 名称）带淡黄色边框 */
+        
         .pricing-card h2 {
             border: 2px solid #ffeb99;
             padding: 10px;
             border-radius: 10px;
             display: inline-block;
-            max-width: 90%; /* 限制宽度，防止超出 */
+            max-width: 90%; 
             word-wrap: break-word;
         }
         
-        /* 价格 & /month 并排 */
+        
         .price {
             display: flex;
             justify-content: center;
@@ -1473,7 +1490,7 @@ main {
             max-width: 100%;
         }
         
-        /* 让 √/X 和文本放在同一行 */
+       
         .feature {
             display: flex;
             align-items: center;
@@ -1486,27 +1503,27 @@ main {
             box-sizing: border-box;
         }
         
-        /* √ 带淡黄色背景 */
+       
         .feature .check {
             background: #ffeb99;
             padding: 5px 10px;
             border-radius: 5px;
         }
         
-        /* X 带灰色背景 */
+        
         .feature .cross {
             background: #ddd;
             padding: 5px 10px;
             border-radius: 5px;
         }
         
-        /* 限制文本宽度，防止超出 */
+        
         .feature p {
             max-width: 90%;
             word-wrap: break-word;
         }
         
-        /* 按钮填充整个卡片底部，橘色背景 */
+        
         .pricing-card button {
             width: 100%;
             background: orange;
@@ -1528,7 +1545,7 @@ main {
 
 
         
-/* 让 h1 和 p 在一行，一个左对齐，一个右对齐 */
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -1536,27 +1553,27 @@ main {
     margin-bottom: 20px;
 }
 
-/* 课程卡片容器，2 列布局 */
+
 .course-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px; /* 调小间距 */
+    gap: 10px; 
 }
-/* 单个课程卡片 */
+
 .Ccard {
     background: white;
     border-radius: 10px;
-    padding: 15px; /* 缩小内边距 */
+    padding: 15px; 
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    gap: 8px; /* 缩小元素之间的间距 */
+    gap: 8px; 
 }
 
 .Ccard h2 {
     text-align: right;
     font-size: 20px;
-    margin-bottom: 5px; /* 缩小 h2 与 h3 的间距 */
+    margin-bottom: 5px; 
 }
 
 .Ccard h3 {
@@ -1565,18 +1582,18 @@ main {
     margin-bottom: 5px;
 }
 
-/* 课程内容块：减少 padding，让边框更紧凑 */
+
 .lesson-group {
     border: 1px solid #ddd;
-    padding: 5px 8px; /* 缩小内边距 */
+    padding: 5px 8px; 
     border-radius: 6px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 3px; /* 减少行间距 */
+    gap: 3px; 
 }
 
-/* 时间段落，缩小 padding，减少整体空间占用 */
+
 .lesson-time {
     background: #f0f0f0;
     padding: 3px 8px;
@@ -1587,7 +1604,7 @@ main {
 
 
 
-/* 让 Achievements 和 Goals 标题 + 段落靠左 */
+
 .achievements-container, .goals-container {
     max-width: 1000px;
     margin: 40px auto;
@@ -1597,21 +1614,21 @@ main {
 .achievements-container p,
 .goals-container h2,
 .goals-container p {
-    text-align: left; /* 让 h2 和 p 靠左 */
-    margin-left: 10px; /* 增加左边距 */
+    text-align: left; 
+    margin-left: 10px; 
 }
 
-/* 让 4 张卡片 2×2 居中排列 */
+
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 列 */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 20px;
-    justify-content: center; /* 让整个卡片区域居中 */
+    justify-content: center; 
     align-items: center;
     margin-top: 20px;
 }
 
-/* 单个卡片 */
+
 .card {
     background: white;
     border-radius: 10px;
@@ -1619,12 +1636,12 @@ main {
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* 让卡片内的元素靠左 */
+    align-items: flex-start; 
     text-align: left;
     gap: 10px;
 }
 
-/* 图片大小 */
+
 .card img {
     width: 50px;
     height: 50px;
@@ -1642,33 +1659,33 @@ main {
             gap: 30px;
         }
         
-        /* 让前 3 个部分横向排列 */
+      
         .footer-top {
             display: flex;
             width: 100%;
             justify-content: space-between;
         }
         
-         /* Home 和 About Us 部分 */
+         
          .footer-middle {
             display: flex;
             justify-content: flex-start;
             gap: 50px;
         }
         
-        /* 让 h3 下面的子项目纵向排列 */
+        
         .footer-middle div {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
         }
-        /* 让社交图标水平排列 */
+        
         .footer-icons {
             display: flex;
             gap: 15px;
         }
         
-        /* 让最后一个元素独占整行 */
+       
         .footer-bottom {
             width: 100%;
             text-align: center;
@@ -1681,5 +1698,4 @@ main {
         
     }
 }
-
 
