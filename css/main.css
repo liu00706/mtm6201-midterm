@@ -1229,10 +1229,12 @@ main {
     }
 }
 
+}
 /* for PC */
-@media screen and (min-width: 1024px )  {
-    body {
 
+
+@media screen and (min-width: 1024px ) {
+    body {
         .Bcard-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr); 
@@ -1240,7 +1242,7 @@ main {
             gap: 20px; 
             width: 80%;
             max-width: 1200px;
-            margin: 40px auto; 
+            margin: 40px auto;
             padding: 20px; 
         }
         
@@ -1287,7 +1289,7 @@ main {
             padding: 20px;
         }
         
-        
+
         .class-card-container .card {
             background: #f8f8f8;
             padding: 20px;
@@ -1328,7 +1330,7 @@ main {
             color: #666;
         }
         
-       
+        
         .class-card-container .card h2 {
             font-size: 20px;
             font-weight: bold;
@@ -1369,13 +1371,11 @@ main {
         .class-card-container .card button:hover {
             background: #d0d0d0;
         }
-        
-        
 
         .testimon {
             display: grid;
             grid-template-columns: repeat(2, 1fr); 
-            grid-template-rows: repeat(2, auto);
+            grid-template-rows: repeat(2, auto); 
             gap: 20px; 
             width: 100%;
             max-width: 1000px;
@@ -1392,12 +1392,12 @@ main {
             flex-direction: column;
         }
         
-        
+       
         .person-card p:first-child {
             margin-bottom: 15px;
         }
         
-       
+        
         .person-info {
             display: flex;
             align-items: center;
@@ -1418,7 +1418,7 @@ main {
             gap: 10px;
         }
         
-       
+        
         .person-info button {
             padding: 10px 15px;
             background: #e0e0e0;
@@ -1433,7 +1433,7 @@ main {
             background: #d0d0d0;
         }
 
-     
+        
 
         .pricing-container {
             display: flex;
@@ -1445,7 +1445,7 @@ main {
             padding: 20px;
         }
         
-       
+    
         .pricing-card {
             background: white;
             border-radius: 15px;
@@ -1460,7 +1460,7 @@ main {
             overflow: hidden; 
         }
         
-        
+
         .pricing-card div {
             background: #f8f8f8;
             padding: 15px;
@@ -1469,7 +1469,7 @@ main {
             box-sizing: border-box;
         }
         
-        
+       
         .pricing-card h2 {
             border: 2px solid #ffeb99;
             padding: 10px;
@@ -1510,7 +1510,7 @@ main {
             border-radius: 5px;
         }
         
-        
+       
         .feature .cross {
             background: #ddd;
             padding: 5px 10px;
@@ -1523,7 +1523,7 @@ main {
             word-wrap: break-word;
         }
         
-        
+       
         .pricing-card button {
             width: 100%;
             background: orange;
@@ -1542,7 +1542,6 @@ main {
             background: #e67e22;
         }
         
-
 
         
 
@@ -1574,7 +1573,6 @@ main {
     text-align: right;
     font-size: 20px;
     margin-bottom: 5px; 
-}
 
 .Ccard h3 {
     text-align: left;
@@ -1601,6 +1599,7 @@ main {
     text-align: right;
     align-self: flex-end;
 }
+
 
 
 
@@ -1636,11 +1635,10 @@ main {
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
     text-align: left;
     gap: 10px;
 }
-
 
 .card img {
     width: 50px;
@@ -1648,6 +1646,12 @@ main {
 }
 
 
+        
+
+        
+        
+
+        
 
         footer {
             display: flex;
@@ -1659,7 +1663,6 @@ main {
             gap: 30px;
         }
         
-      
         .footer-top {
             display: flex;
             width: 100%;
@@ -1685,16 +1688,13 @@ main {
             gap: 15px;
         }
         
-       
+        
         .footer-bottom {
             width: 100%;
             text-align: center;
             padding-top: 20px;
         }
-
-
-
-        
         
     }
+}
 }
